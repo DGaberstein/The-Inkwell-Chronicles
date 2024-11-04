@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-black">
+    <ActionBar title="Battle!" class="bg-black text-white" />
+    
+    <GridLayout rows="*, auto, *">
+        <!-- Enemy Team -->
+        <ListView row="0" items="{{ enemyTeam }}" class="p-2">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto, auto" columns="auto, *" class="comic-border p-2 m-1">
+                    <Label row="0" col="0" text="{{ name }}" class="text-white ink-text" />
+                    <StackLayout row="0" col="1" class="ml-2">
+                        <Progress value="{{ health }}" maxValue="{{ maxHealth }}" class="bg-white" />
+                        <Label text="{{ health + '/' + maxHealth }}" class="text-white text-right" />
+                    </StackLayout>
+                    <ListView row="1" colSpan="2" items="{{ statusEffects }}" class="m-1">
+                        <ListView.itemTemplate>
+                            <Label text="{{ name }}" class="text-xs text-white" />
+                        </ListView.itemTemplate>
+                    </ListView>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <!-- Battle Actions -->
+        <ScrollView row="1" class="p-4 bg-gray-900">
+            <StackLayout>
+                <Label text="{{ battleStatus }}" class="text-white text-center mb-2" />
+                <WrapLayout visibility="{{ state === 'PLAYER_TURN' ? 'visible' : 'collapsed' }}">
+                    <Button text="Ink Slash" tap="{{ onAbilityTap }}" abilityIndex="0" class="btn-primary m-1" />
+                    <Button text="Poison Strike" tap="{{ onAbilityTap }}" abilityIndex="1" class="btn-primary m-1" />
+                    <Button text="Defensive Stance" tap="{{ onAbilityTap }}" abilityIndex="2" class="btn-primary m-1" />
+                </WrapLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Player Team -->
+        <ListView row="2" items="{{ playerTeam }}" class="p-2">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto, auto" columns="auto, *" class="comic-border p-2 m-1">
+                    <Label row="0" col="0" text="{{ name }}" class="text-white ink-text" />
+                    <StackLayout row="0" col="1" class="ml-2">
+                        <Progress value="{{ health }}" maxValue="{{ maxHealth }}" class="bg-white" />
+                        <Label text="{{ health + '/' + maxHealth }}" class="text-white text-right" />
+                    </StackLayout>
+                    <ListView row="1" colSpan="2" items="{{ statusEffects }}" class="m-1">
+                        <ListView.itemTemplate>
+                            <Label text="{{ name }}" class="text-xs text-white" />
+                        </ListView.itemTemplate>
+                    </ListView>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

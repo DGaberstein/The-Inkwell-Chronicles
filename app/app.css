@@ -1,0 +1,99 @@
+/* Base styles */
+.page {
+    background-color: black;
+    color: white;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 12;
+    border-radius: 8;
+    margin: 4;
+}
+
+.ink-text {
+    font-family: system;
+    font-weight: bold;
+}
+
+.comic-border {
+    border-width: 2;
+    border-color: white;
+    border-radius: 4;
+    margin: 4;
+}
+
+.action-bar {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.status-bar {
+    background-color: #2d2d2d;
+    padding: 8;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    padding: 8;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-gray-900 {
+    background-color: #1a1a1a;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-lg {
+    font-size: 18;
+}
+
+.text-xs {
+    font-size: 12;
+}
+
+.mb-4 {
+    margin-bottom: 16;
+}
+
+.mb-8 {
+    margin-bottom: 32;
+}
+
+.mb-2 {
+    margin-bottom: 8;
+}
+
+.m-1 {
+    margin: 4;
+}
+
+.m-2 {
+    margin: 8;
+}
+
+.p-2 {
+    padding: 8;
+}
+
+.p-4 {
+    padding: 16;
+}
+
+.ml-2 {
+    margin-left: 8;
+}

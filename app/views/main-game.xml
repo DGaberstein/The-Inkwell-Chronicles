@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-black">
+    <ActionBar title="The Inkwell Chronicles" class="bg-black text-white" />
+    
+    <GridLayout rows="auto, *, auto">
+        <!-- Status Bar -->
+        <StackLayout row="0" class="p-2 bg-gray-900">
+            <Label text="{{ 'Inkwell Essence: ' + inkwellEssence }}" class="text-white" />
+        </StackLayout>
+
+        <!-- Game Area -->
+        <GridLayout row="1" class="p-4">
+            <StackLayout>
+                <Label text="Welcome to the Inkwell Chronicles" class="text-white text-center text-lg mb-4" />
+                <Label text="A world of ink awaits..." class="text-white text-center mb-8" />
+                <Button text="Start Adventure" tap="{{ startAdventure }}" class="btn-primary m-2" />
+            </StackLayout>
+        </GridLayout>
+
+        <!-- Navigation Menu -->
+        <GridLayout row="2" columns="*, *, *" class="p-2 bg-gray-900">
+            <Button col="0" text="Collection" tap="{{ showCollection }}" class="text-white" />
+            <Button col="1" text="Battle" tap="{{ startBattle }}" class="text-white" />
+            <Button col="2" text="Shop" tap="{{ openShop }}" class="text-white" />
+        </GridLayout>
+    </GridLayout>
+</Page>
